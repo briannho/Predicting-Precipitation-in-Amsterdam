@@ -1,0 +1,59 @@
+#script used for sequence of hidden states prediction using nonhomogeneous HMM
+
+# Action
+action viterbi
+
+# Type of the model
+model_type nhmm
+
+# Number of hidden states
+num_states 5
+
+# Emission distribution
+emission
+independent 5 bernoulli 2
+
+# Data file
+data rain.txt
+
+# Model
+model_filename best_amsterdam_nhmm_model
+
+# Number of finite-valued vector components for the data
+num_discrete_data_components 5
+
+# Number of output data sequences
+num_data_sequences 31
+
+# Length of each sequence
+data_sequence_length 365
+
+# Output file
+output amsterdam_nhmm_viterbi
+
+# Number of random restarts
+num_restarts 3
+
+# Cross-validation type
+#xval_type leave_n_out
+
+# Number of examples to leave out
+#examples_out 1
+
+# Input file
+input_filename allpredictors.txt
+
+# Dimensionality of the input variable in the transition distribution
+input_dimensionality 3
+
+# Number of real-valued vector components for the input data
+num_real_input_components 5
+
+# Number of input data sequences
+num_input_sequences 31
+
+# Length of each input sequence
+input_sequence_length 365
+
+em_verbose
+

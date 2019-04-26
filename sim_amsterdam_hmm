@@ -1,0 +1,34 @@
+#script used for simulations of homogeneous HMM
+
+# Action
+action simulation
+
+# Type of the model
+model_type hmm
+
+# Number of hidden states
+num_states 5
+
+# Emission distribution
+emission
+independent 5 bernoulli 2
+
+# Number of finite-valued vector components for the data
+num_discrete_data_components 5
+
+# Number of output data sequences
+num_data_sequences 31
+
+# Length of each sequence
+data_sequence_length 365
+
+# Output file
+output amsterdam_hmm_sim
+
+# Model file name
+model_filename best_amsterdam_hmm_model
+
+# Number of simulations per output sequence
+num_simulations 100
+
+dim-index-display
